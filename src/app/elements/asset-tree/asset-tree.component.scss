@@ -1,0 +1,272 @@
+.tree-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #141416;
+}
+
+.tree-refresh .fa {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  background-size: 18px;
+  background-position: 3px 3px;
+  margin-left: -30px;
+  position: absolute;
+  margin-right: 10px;
+  text-align: center;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome !important;
+}
+
+.ztree {
+  height: 100%;
+  background-color: #141416;
+}
+
+.view-menu {
+  background: #000;
+  border: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0;
+  box-shadow: 0 3px 6px 0px rgba(0, 0, 0, 0.16);
+  position: absolute;
+  opacity: 1;
+  padding: 6px 0;
+  z-index: 1000;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.view-menu, .view-menu * {
+  box-sizing: border-box;
+}
+
+.view-menuContainer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.view-menu tr {
+  margin: 0;
+}
+
+.view-menu__item {
+  cursor: pointer;
+  padding: 0 6px;
+}
+
+.view-menu td {
+  display: block;
+  padding: 0 15px;
+  text-decoration: none;
+  min-width: 150px;
+  width: auto;
+  opacity: 1;
+  white-space: nowrap;
+  line-height: 24px;
+  text-shadow: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.view-menu__icon {
+  padding-right: 5px;
+  width: 15px;
+}
+
+.view-menu__item.view-menu__item--separator {
+  background: #181414;
+  border: 0;
+  border-top: none;
+  height: 1px;
+  min-height: 1px;
+  max-height: 1px;
+  padding: 0;
+  border-left: none;
+  text-shadow: 0 0 0 transparent;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  margin: 2px 0;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+tr:hover {
+  background-color: #463e3e;
+}
+
+.view-menu table {
+  border-spacing: 0 !important;
+}
+
+.view-menu__data {
+  padding: 0 6px;
+}
+
+.tree-type-banner {
+  position: relative;
+  height: 31px;
+  display: flex;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 31px;
+  padding: 0 11px;
+  background-color: #27272a;
+  border-bottom: solid 1px #2f2a2a;
+  border-right: rgba(58, 51, 51, 0.5) 1px solid;
+
+  .tree-icon-rotate {
+    height: 30px;
+    padding: 6px 0;
+    font-size: 16px;
+    color: white;
+  }
+
+  .rotate {
+    transform: rotate(-90deg);
+  }
+
+  .show {
+    display: none;
+  }
+}
+
+.tree-banner-left {
+  display: inline-block;
+  cursor: pointer;
+  flex: 1;
+}
+
+.tree-type-banner-label {
+  padding: 9px 8px;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.tree-type-content {
+  position: relative;
+  padding: 5px 10px;
+  min-height: 40px;
+  overflow-x: auto;
+  height: calc(100% - 31px);
+}
+
+.tree-type-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background: rgba(0, 0, 0, .1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tree-banner-icon {
+  padding: 0 0 0 5px;
+  color: rgb(204, 204, 204);
+  width: 20px;
+  line-height: 30px;
+  &.fa-square-o {
+    font-weight: bold;
+    padding: 0 0 0 6px;
+  }
+}
+
+.tree-banner-icon:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.tree-banner-icon-zone {
+  line-height: 30px;
+  position: absolute;
+  right: 6px;
+}
+
+.open-tree {
+  flex: 1;
+}
+
+.tree-type {
+  transition: all .3s;
+}
+
+.expand-tree {
+  height: calc(100% - 31px);
+}
+
+.tree-type .tree-search {
+  position: relative;
+  top: 1px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 12px;
+  vertical-align: sub;
+  transition: .25s;
+  overflow: hidden;
+
+  .fa-search {
+    padding-top: 1px;
+  }
+}
+
+.tree-type .tree-search .tree-banner-icon {
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tree-type .tree-search.active, .tree-search.active {
+  width: 160px;
+  background: #1e1b1b;
+}
+
+.tree-type .tree-search.active:hover {
+  border-radius: 12px;
+}
+
+.tree-type .tree-search input {
+  position: relative;
+  left: 19px;
+  width: 135px;
+  height: 100%;
+  background-color: transparent;
+  color: #f0f0f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+}
+
+.tree-banner-icon-zone .disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
